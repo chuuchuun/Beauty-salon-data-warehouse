@@ -1,0 +1,189 @@
+--Compare different types of procedures provided in this and previous month.
+
+SELECT 
+    { 
+        [Measures].[Appointment FT Count] 
+    } ON COLUMNS,
+    CrossJoin(
+        { 
+            [Appointment Date].[2024].[January], 
+            [Appointment Date].[2024].[January].NEXTMEMBER 
+        },
+        [Procedure DT].[Procedure Type].AllMembers
+    ) ON ROWS
+FROM 
+    [Booking Management DW];
+
+--Compare the number of appointments during holidays in this and previous month.
+SELECT 
+    { 
+        [Measures].[Appointment FT Count]  
+    } ON COLUMNS,
+    CrossJoin(
+        { 
+            [Appointment Date].[2024].[May],
+[Appointment Date].[2024].[May].NEXTMEMBER
+        },
+        Union(
+            Filter(
+                [Appointment Date].[Holiday].Children,
+                [Appointment Date].[Holiday].CurrentMember.Name = "Yes"
+            ),
+            Filter(
+                [Appointment Date].[Holiday].Children,
+                [Appointment Date].[Holiday].CurrentMember.Name = "No"
+            )
+        )
+    ) ON ROWS
+FROM 
+    [Booking Management DW]
+
+--What is the relation between employees' years of experience and procedure sales.
+
+SELECT 
+    { 
+        [Measures].[Appointment FT Count] 
+    } ON COLUMNS,
+    NON EMPTY CrossJoin(
+        [Staff Member DT].[Experience Years Category].Children, 
+        [Procedure DT].[Procedure Type].Children      
+    ) ON ROWS
+FROM 
+    [Booking Management DW]
+--What are the most frequently used products in services this month and the previous month?
+
+SELECT 
+    { 
+        [Measures].[Product Quantity]
+    } ON COLUMNS,
+    TOPCOUNT(
+        CrossJoin(
+            { 
+                [Appointment Date].[2024].[March], 
+                [Appointment Date].[2024].[March].NEXTMEMBER  
+            },
+            [Product DT].[Product Name].Children
+        ),
+        1, 
+        [Measures].[Product Quantity] 
+    ) ON ROWS
+FROM 
+    [Booking Management DW]
+
+-- What is the relation between employees’ salary and their customer’s satisfaction rate?
+SELECT 
+    { 
+        [Measures].[Rating Sum], 
+        [Measures].[Rating Count 1],
+[Measures].[Avg Rating]
+    } ON COLUMNS,
+    [Staff Member DT].[Salary Category].Children ON ROWS
+FROM 
+    [Booking Management DW]
+
+-- How many new clients with referrals booked appointments at least one more time?
+WITH
+MEMBER [Measures].[Referral Count] AS
+    COUNT(
+        FILTER(
+            [Client DT].[Client ID].MEMBERS,
+            [Measures].[Appointment FT Count] > 1  -- Clients who booked appointments more than once
+            AND [Junk DT].[Referral Flag].&[Yes]   -- Filter by referral flag (assuming &1 means referred clients)
+        )
+    )
+SELECT 
+    { [Measures].[Referral Count] } ON COLUMNS
+FROM 
+    [Booking Management DW]
+--Compare ratings of the first appointment with and without referrals?
+SELECT 
+    { 
+        [Measures].[Avg Rating]  -- Average rating measure
+    } ON COLUMNS,
+    NON EMPTY 
+    [Junk DT].[Referral Flag].Children ON ROWS
+FROM 
+    [Booking Management DW]
+WHERE 
+    (
+        FILTER(
+          [Appointment Date].[Date].MEMBERS,
+            [Appointment Date].[Date].CurrentMember = 
+                HEAD(
+                    ORDER(
+                        [Client DT].[Client ID].CurrentMember.Children, 
+                       [Appointment Date].[Date].CurrentMember, 
+                        BASC
+                    )
+                ).Item(0) 
+        )
+    )
+
+--
+SELECT 
+    { 
+        [Measures].[Appointment FT Count]  -- Appointment count measure
+    } ON COLUMNS,
+    NON EMPTY 
+    CrossJoin(
+        Filter(
+            [Procedure DT].[Procedure Type].Children,  -- First filter for all procedure types
+            [Measures].[Appointment FT Count] > 0  -- Optional: Only include procedure types with appointments
+        ),
+        TOPCOUNT(
+            Filter(
+                [Junk DT].[Referral Flag].Children,  -- Apply filter for "Yes" referral flag
+                [Junk DT].[Referral Flag].CurrentMember.Name = "Yes"  -- Only keep rows where referral flag is "Yes"
+            ),
+            1, 
+            [Measures].[Appointment FT Count]  -- Order by appointment count
+        )
+    ) ON ROWS
+FROM 
+    [Booking Management DW]
+--
+SELECT 
+    { 
+        [Measures].[Procedure Price]
+    } ON COLUMNS,
+    NON EMPTY 
+    CrossJoin(
+        Filter(
+            [Procedure DT].[Procedure Type].Children,
+            [Measures].[Appointment FT Count] > 0
+        ),
+        Filter(
+            [Junk DT].[Referral Flag].Children, 
+            [Junk DT].[Referral Flag].CurrentMember.Name = "Yes"         )
+    ) ON ROWS
+FROM 
+    [Booking Management DW]
+WHERE 
+    (
+        SELECT 
+    { 
+        [Measures].[Procedure Price]  -- Sum of procedure prices (total profit)
+    } ON COLUMNS,
+    NON EMPTY 
+    CrossJoin(
+        Filter(
+            [Procedure DT].[Procedure Type].Children,  -- Filter for procedure types
+            [Measures].[Appointment FT Count] > 0  -- Only include procedure types with appointments
+        ),
+        Filter(
+            [Junk DT].[Referral Flag].Children,  -- Apply filter for "Yes" referral flag
+            [Junk DT].[Referral Flag].CurrentMember.Name = "Yes"  -- Only keep rows where referral flag is "Yes"
+        )
+    ) ON ROWS
+FROM 
+    [Booking Management DW]
+WHERE 
+    (
+         Union(
+            { [Appointment Date].[2024].[January] }, 
+            { [Appointment Date].[2024].[January].NEXTMEMBER }  
+        )
+    )
+ 
+    )
+

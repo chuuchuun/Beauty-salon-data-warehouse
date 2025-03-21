@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="DESKTOP-U7IUU37.Booking Management DW"
+  DTS:DTSID="{B019327B-0C4D-410E-94A7-8E4A1FEDAB86}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-U7IUU37;Initial Catalog=BookingManagementDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{B019327B-0C4D-410E-94A7-8E4A1FEDAB86}DESKTOP-U7IUU37.Booking Management DW;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
