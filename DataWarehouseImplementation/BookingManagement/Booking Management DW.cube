@@ -1,0 +1,856 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bd6e53ed-ec85-4582-95db-9da003b51cfc" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Booking Management DW</ID>
+  <Name>Booking Management DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="34" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-1980" scrolltop="5610" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="93" x="13944" y="14049" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01ee0000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ClientDT" left="3085" top="19343" logicalid="17" controlid="1" masterid="0" hint1="0" hint2="0" width="3810" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e20e0000f40d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ClientDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Staff_memberDT" left="12281" top="6819" logicalid="18" controlid="2" masterid="0" hint1="0" hint2="0" width="4683" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004b12000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Staff_memberDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ProcedureDT" left="20" top="10730" logicalid="19" controlid="3" masterid="0" hint1="0" hint2="0" width="3519" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000bf0d0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ProcedureDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="ProductDT" left="9137" top="1694" logicalid="20" controlid="4" masterid="0" hint1="0" hint2="0" width="3043" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e30b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_ProductDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="JunkDT" left="9295" top="19343" logicalid="21" controlid="5" masterid="0" hint1="0" hint2="0" width="3440" height="2302" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000700d0000fe080000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_JunkDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DateDT" left="3641" top="0" logicalid="22" controlid="6" masterid="0" hint1="0" hint2="0" width="3096" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000180c000043110000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DateDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="TimeDT" left="12281" top="14219" logicalid="23" controlid="7" masterid="0" hint1="0" hint2="0" width="3000" height="2725" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000a50a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_TimeDT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="AppointmentFT" left="5939" top="9381" logicalid="24" controlid="8" masterid="0" hint1="0" hint2="0" width="3942" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000660f000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_AppointmentFT" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="4591" top="14081" logicalid="25" controlid="9" masterid="0" hint1="0" hint2="0" width="2519" height="5762" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-ClientDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="8" sourceattachpoint="6" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4990" y="19343" />
+              <point x="4990" y="16862" />
+              <point x="6810" y="16862" />
+              <point x="6810" y="14381" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9581" top="8920" logicalid="26" controlid="10" masterid="0" hint1="0" hint2="0" width="3000" height="2161" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-Staff_memberDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="2" destid="8" sourceattachpoint="26" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12281" y="9319" />
+              <point x="11081" y="9319" />
+              <point x="11081" y="10781" />
+              <point x="9881" y="10781" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3239" top="11482" logicalid="27" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-ProcedureDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="8" sourceattachpoint="17" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="3539" y="11881" />
+              <point x="5939" y="11881" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9260" top="3920" logicalid="28" controlid="12" masterid="0" hint1="0" hint2="0" width="1798" height="5761" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-ProductDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="8" sourceattachpoint="5" destattachpoint="12" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10658" y="4419" />
+              <point x="10658" y="6900" />
+              <point x="9560" y="6900" />
+              <point x="9560" y="9381" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="8160" top="14081" logicalid="29" controlid="13" masterid="0" hint1="0" hint2="0" width="3255" height="5762" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-JunkDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="8" sourceattachpoint="4" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="11015" y="19343" />
+              <point x="11015" y="16862" />
+              <point x="8460" y="16862" />
+              <point x="8460" y="14381" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="5340" top="3920" logicalid="30" controlid="14" masterid="0" hint1="0" hint2="0" width="2870" height="5761" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-DateDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="8" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="5739" y="4419" />
+              <point x="5739" y="6900" />
+              <point x="7910" y="6900" />
+              <point x="7910" y="9381" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="3690" top="3920" logicalid="31" controlid="15" masterid="0" hint1="0" hint2="0" width="2870" height="5761" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-DateDT1]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="8" sourceattachpoint="1" destattachpoint="0" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="4089" y="4419" />
+              <point x="4089" y="6900" />
+              <point x="6260" y="6900" />
+              <point x="6260" y="9381" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline.080.1" left="9581" top="12131" logicalid="32" controlid="16" masterid="0" hint1="0" hint2="0" width="3000" height="3850" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="16448250" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[AppointmentFT-TimeDT]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="8" sourceattachpoint="14" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="12281" y="15581" />
+              <point x="11081" y="15581" />
+              <point x="11081" y="12431" />
+              <point x="9881" y="12431" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-1980</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>5610</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>93</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="87156f90-98e1-42ea-be74-428d02d90d57">
+      <ID>Client DT</ID>
+      <Name>Client DT</Name>
+      <DimensionID>Client DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="391c801d-4290-42f0-a1b0-4fe02512a26b">
+          <AttributeID>Client ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30bce766-5b2b-4675-b352-b1319b946f29">
+          <AttributeID>PESEL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="251c3922-466f-45e4-807c-bb8bc63ad744">
+          <AttributeID>Name And Surname</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="410dad05-6ccd-4b86-8f96-b6d341af6b92">
+          <AttributeID>Phone Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97eaa26a-cc30-42e3-ba98-ce885d922e8a">
+          <AttributeID>Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="496a5f8e-237a-4e62-8644-e16640a35103">
+          <AttributeID>Is Current</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="838a43f7-c66f-4e1c-b299-c2ddbd582264">
+      <ID>Procedure DT</ID>
+      <Name>Procedure DT</Name>
+      <DimensionID>Procedure DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="662e7292-1185-4add-bdd2-b97b671119ef">
+          <AttributeID>Procedure ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9f96b281-c409-4207-873e-8bc4211ead11">
+          <AttributeID>Procedure Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3af7b3e4-2773-46c4-9280-66b8fee6940b">
+          <AttributeID>Duration Category</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="da79b36d-a36d-402a-9047-2a9411221f8f">
+      <ID>Time DT</ID>
+      <Name>Time DT</Name>
+      <DimensionID>Time DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="353970ad-3769-4e0e-ae25-7cf1396388d5">
+          <AttributeID>Time ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd9befee-406f-49f3-8f41-aaa99e969b8b">
+          <AttributeID>Hour</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="084d7d84-6e44-40a1-ad5b-bbb780bfa420">
+          <AttributeID>Minute</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="540c96f5-7cc9-4a60-9bef-4644d905b117">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="c1a6d76f-6928-4e38-80e3-a5bd42b9cce6">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="d97bbc20-ebd7-4346-b4b6-d65e381f0474">
+      <ID>Product DT</ID>
+      <Name>Product DT</Name>
+      <DimensionID>Product DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="1d3d542d-d133-43a4-b7f0-42e8c2e07c35">
+          <AttributeID>Product ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4cf5ba38-9b2c-4a92-b94f-c24992f76024">
+          <AttributeID>Product Name</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="924ba64c-1e5e-4a11-a3a2-5bc6b51f8429">
+          <AttributeID>Product Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0e8a5ca1-0d66-4806-99c2-864e6f998d06">
+          <AttributeID>Producer</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="af40befa-bdf2-4cae-8166-968cda789fb1">
+      <ID>Junk DT</ID>
+      <Name>Junk DT</Name>
+      <DimensionID>Junk DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ba319e04-0629-4a3c-8d95-85f9fb8c0d7f">
+          <AttributeID>Junk ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7b24902-d5ce-48c1-b1c7-b61d97fd5894">
+          <AttributeID>Confirmation Type</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11ef0053-553d-41bb-9f04-aba5fa355a47">
+          <AttributeID>Referral Flag</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f305d389-9f4f-4857-bd4b-c1b53f6138f0">
+      <ID>Creation Date</ID>
+      <Name>Creation Date</Name>
+      <DimensionID>Date DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="357ffbd6-38bd-49ae-a145-a8d795d6ebfd">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e49e7b09-f105-4954-a055-fb77f5c7571d">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="96286eb7-8ecb-4ee3-bd13-631e96c722a6">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="980e7a0c-f0e8-46a5-9e54-4888af0a5f85">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ae7bd93-b3f1-48b1-8cf8-0cf02886e5df">
+          <AttributeID>Month Number</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="5fe67332-91be-4cb0-bd3b-f92225455986">
+          <AttributeID>Day Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="380a8e25-2825-4f4f-9e70-bb06b3cfa344">
+          <AttributeID>Day Of Week</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="3df5f98a-9f24-43c0-b898-872996dae4be">
+          <AttributeID>Holiday</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="65cbf29a-f2be-466b-af87-ab3eacc39ce0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="04221829-c6e1-4821-8452-a4c652f8ec9c">
+      <ID>Appointment Date</ID>
+      <Name>Appointment Date</Name>
+      <DimensionID>Date DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="605f40c2-da10-4ca7-98ed-96da9d60821b">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3c6a525f-396a-491b-bcfc-3799f79f2f86">
+          <AttributeID>Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="263e51ca-7b6b-4e97-8bcc-b04f8b3374ab">
+          <AttributeID>Year</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="5b9a8676-6292-4d11-bcdb-6dbaf61999a7">
+          <AttributeID>Month</AttributeID>
+          <AggregationUsage>Full</AggregationUsage>
+        </Attribute>
+        <Attribute dwd:design-time-name="de638c3f-061a-4628-a874-a8a8d94faff2">
+          <AttributeID>Month Number</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="38289421-2bf0-4eae-b8b5-4ac6f652f007">
+          <AttributeID>Day Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="441d9a19-c856-43f7-a561-e270e6022154">
+          <AttributeID>Day Of Week</AttributeID>
+          <AttributeHierarchyEnabled>false</AttributeHierarchyEnabled>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f59f4b2-ea61-46d5-abf6-e69bcb23e214">
+          <AttributeID>Holiday</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="2521d084-525f-4525-9e6e-5654c528334e">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="0d9fd748-a517-45e1-8338-2721ccb3a949">
+      <ID>Staff Member DT</ID>
+      <Name>Staff Member DT</Name>
+      <DimensionID>Staff Member DT</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="89304a30-e6a1-48a9-bbe3-10babba5ce9d">
+          <AttributeID>Staff ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e06cc0e4-11b0-4abb-addc-517fb9890b69">
+          <AttributeID>PESEL</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0593576e-a0b5-4362-9f4f-d9dd7bb98ae1">
+          <AttributeID>Name And Surname</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1b854e13-8625-4b5c-80e1-68f08cc625b4">
+          <AttributeID>Phone Number</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5f681d7c-b9c8-4278-b7ee-2e4388dc3f23">
+          <AttributeID>Email</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c248cb14-f7df-497e-93fc-b4531472ae78">
+          <AttributeID>Qualification</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="714feabd-81e7-4d8a-b414-8e211e85dcca">
+          <AttributeID>Experience Years Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="42a7f60d-778d-44cc-869c-c283eb86d927">
+          <AttributeID>Education</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a8f8d273-4ac4-4096-b428-e5baca870e98">
+          <AttributeID>Salary Category</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="56474fdc-f6bb-47bd-aa7d-3a7dc71f3855">
+          <AttributeID>Is Current</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="e2ad65a1-6fd7-4731-8e77-84416f5fae1c">
+      <ID>Appointment FT</ID>
+      <Name>Appointment FT</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="e2e32c9f-e1db-4fe8-8fe1-7a5a10d7d6e2">
+          <ID>Rating</ID>
+          <Name>Rating</Name>
+          <AggregateFunction>None</AggregateFunction>
+          <Source dwd:design-time-name="e985ccfd-a792-4aa4-8407-a4fe355c23a1">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="68624312-c7b1-4214-ad0e-fa3b393379d1">
+              <TableID>dbo_AppointmentFT</TableID>
+              <ColumnID>Rating</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="c1aaebe4-494d-4626-89c7-3d14340c54d5">
+          <ID>Product Quantity</ID>
+          <Name>Product Quantity</Name>
+          <Source dwd:design-time-name="a6d74a0d-99c0-4297-bc1a-46103cd14030">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="a4287cb6-92cb-486a-9fce-af9a792ae45e">
+              <TableID>dbo_AppointmentFT</TableID>
+              <ColumnID>Product_quantity</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="da9efe06-cec3-4810-aac8-669244db6368">
+          <ID>Procedure Price</ID>
+          <Name>Procedure Price</Name>
+          <Source dwd:design-time-name="c90cf318-0554-433c-965b-e27562bd059f">
+            <DataType>Double</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="e7153094-ee09-42a9-9c73-3dc2afaa8e9d">
+              <TableID>dbo_AppointmentFT</TableID>
+              <ColumnID>Procedure_price</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ff8b559e-92c9-484d-b045-7f99d2cc5a49">
+          <ID>Appointment FT Count</ID>
+          <Name>Appointment FT Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="44d901b1-861e-44a0-bbc6-0e479e597295">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="07fdb2f5-6ba2-44f1-a18b-a34688e7326b">
+              <TableID>dbo_AppointmentFT</TableID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="1fbb8f05-e5dd-49a9-91f8-9591bdbd1442">
+          <ID>Rating Count</ID>
+          <Name>Rating Count 1</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <DataType>Integer</DataType>
+          <Source dwd:design-time-name="951b1591-c692-4ac6-bad7-2c946df3029b">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="af2ce15e-8f23-4fd2-92f6-854608fab028">
+              <TableID>dbo_AppointmentFT</TableID>
+              <ColumnID>Rating</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="ad773290-3d4c-4a51-b138-1c905f155af9">
+          <ID>Rating - Appointment FT</ID>
+          <Name>Rating Sum</Name>
+          <Source dwd:design-time-name="232914c3-90fd-44bf-977b-d9d285338a52">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="2e95aaed-84b2-48e2-a80d-4eb006642b6f">
+              <TableID>dbo_AppointmentFT</TableID>
+              <ColumnID>Rating</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <EstimatedRows>3062823</EstimatedRows>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5fddeb5a-1396-46c5-82bf-e77af1f8f014">
+          <CubeDimensionID>Client DT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="36894122-5423-4005-b6f0-618556c92ebb">
+              <AttributeID>Client ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="c830e3fa-141d-437f-abc1-a32d7f1acc75">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="464feae4-e007-489c-9283-4702df0e5bce">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Client_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="48533a1b-6055-4d18-89b0-effb69a19b3f">
+          <CubeDimensionID>Procedure DT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2b327b81-7f17-4952-8df1-935269e5a16e">
+              <AttributeID>Procedure ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="27da2d3b-65dd-4a64-a698-2fcdc98a4c2e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="e9a21473-06a2-49d1-9cb8-2316b208cc1f">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Procedure_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="5764b647-197e-4fbf-b1d9-e75595e6be84">
+          <CubeDimensionID>Time DT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d742de49-d7d6-4476-b231-a1170da2d31c">
+              <AttributeID>Time ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="93d015e2-3c02-40ac-b5b6-8a8f10e984c3">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fda0e119-5018-4d40-97f8-926ea270bb56">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Time_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bc43a27f-721b-4034-8074-5f72ebec78b5">
+          <CubeDimensionID>Product DT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="86e16e8f-9659-4c71-a2c9-2cbcbc1d12ff">
+              <AttributeID>Product ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3c3f1fe2-25c7-46d8-9e1f-d24e7778544c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="616a44c6-17a0-45a5-bec5-24c5068aef6d">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Product_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="bf6e6900-0742-4cfe-8ed7-d9b146f2e669">
+          <CubeDimensionID>Junk DT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="019c0f7a-e5d0-44ab-9f02-dcc78bf3bb90">
+              <AttributeID>Junk ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="481c5d70-e754-44f4-bbd9-7a025b417a33">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1e434d9f-3424-4234-8bc7-c09b44a07a04">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Junk_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="51a6611e-5a47-489a-9f56-4d6c53fa47cb">
+          <CubeDimensionID>Creation Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="21ec2e84-b467-426c-98b0-9eff54f2b8af">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b3bcbb0a-a10c-4049-99fd-983146f2ec7c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="15d001fe-3843-4827-871a-e6f138a6bb51">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Creation_date_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="23051ef2-8a40-4f21-9e01-50056d53dc89">
+          <CubeDimensionID>Appointment Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="7f655b9c-fd3f-4c36-a590-57baae758b71">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fac6ec8c-930c-427c-85c2-773bf6b759ef">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="1a943755-a09d-4473-9a62-1557700b8398">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Appointment_date_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="d6a62d5e-8f8a-430c-bcbb-2bf106113cd3">
+          <CubeDimensionID>Staff Member DT</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="aa72063a-5cd3-4ca0-84b4-8496abf7dcfd">
+              <AttributeID>Staff ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="dc4831e0-94a4-49f1-b33f-50752e8acc4c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b5375916-b7f9-49fb-aaa4-a49a88f5bdef">
+                    <TableID>dbo_AppointmentFT</TableID>
+                    <ColumnID>Staff_member_ID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+      <AggregationDesigns />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="332e310a-ccab-443f-a230-5f07b65a659d">
+    <DataSourceViewID>Booking Management DW</DataSourceViewID>
+  </Source>
+  <MdxScripts>
+    <MdxScript dwd:design-time-name="464e6284-20ec-4ba7-a6c6-d9a20bc67939">
+      <ID>MdxScript</ID>
+      <Name>MdxScript</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <Commands>
+        <Command>
+          <Text>CALCULATE;      
+CREATE MEMBER CURRENTCUBE.[Measures].[Weekday Number]
+AS 
+    WEEKDAY([Appointment Date].[Date].CurrentMember.MemberValue, 2), 
+VISIBLE = 1;  
+
+CREATE MEMBER CURRENTCUBE.[Measures].[Avg Rating] AS 
+    [Measures].[Rating Sum] / [Measures].[Rating Count 1], 
+VISIBLE = 1; 
+</Text>
+        </Command>
+      </Commands>
+    </MdxScript>
+  </MdxScripts>
+  <Kpis>
+    <Kpi dwd:design-time-name="97862dde-e601-4797-8b99-e83bfda3a5ce">
+      <ID>KPI</ID>
+      <Name>AppointmentGrowth</Name>
+      <Value>[Measures].[Appointment FT Count]</Value>
+      <Goal>(
+    [Measures].[Appointment FT Count],
+    ParallelPeriod(
+        [Appointment Date].[Date_hierarchy].[Month], 
+        1, 
+        [Appointment Date].[Date_hierarchy].CurrentMember
+    )
+) * 1.01
+</Goal>
+      <Status>IIF(
+    KPIValue("AppointmentGrowth") &gt; KPIGoal("AppointmentGrowth"), 
+    1, 
+    -1
+)
+</Status>
+      <Trend>IIF(
+    [Measures].[Appointment FT Count] &gt; 
+    (
+        [Measures].[Appointment FT Count], 
+        ParallelPeriod(
+            [Appointment Date].[Date_hierarchy].[Month], 
+            1, 
+            [Appointment Date].[Date_hierarchy].CurrentMember
+        )
+    ),
+    1, 
+    -1
+)
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+    <Kpi dwd:design-time-name="74e945ae-cf66-495f-b31f-7c6a064cf1cc">
+      <ID>KPI 1</ID>
+      <Name>SatisfactionGrowth</Name>
+      <Value>[Measures].[Avg Rating]
+</Value>
+      <Goal>(
+[Measures].[Avg Rating],
+        ParallelPeriod(
+            [Appointment Date].[Date_hierarchy].[Month], 
+            1, 
+            [Appointment Date].[Date_hierarchy].CurrentMember
+        )
+    ) * 1.01;</Goal>
+      <Status>IIF(
+    KPIValue("SatisfactionGrowth") &gt; KPIGoal("SatisfactionGrowth"), 
+    1, 
+    -1
+)
+</Status>
+      <Trend>IIF(
+    [Measures].[Avg Rating] &gt; 
+    (
+        [Measures].[Avg Rating], 
+        ParallelPeriod(
+            [Appointment Date].[Date_hierarchy].[Month], 
+            1, 
+            [Appointment Date].[Date_hierarchy].CurrentMember
+        )
+    ),
+    1, 
+    -1
+)
+</Trend>
+      <TrendGraphic>Standard Arrow</TrendGraphic>
+      <StatusGraphic>Gauge - Ascending</StatusGraphic>
+    </Kpi>
+  </Kpis>
+</Cube>
